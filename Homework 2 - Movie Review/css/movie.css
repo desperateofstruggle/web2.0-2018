@@ -1,0 +1,121 @@
+/*
+    made by 温卓沛(17343115)
+    section: Homework 2 - Movie Review
+    此文件主要用于实现网页内容的编排，如设定文字图片的分块属性等
+    以为最近的电影TMNT创建一个名为Rancid Tomatoes的电影评论网站的页面
+*/
+body{
+    background-image: url("../images/background.png");
+    font-size: 8pt;
+    font-family: Verdana, Tahoma, sans-serif;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    position: relative;
+}
+#banner{
+    text-align: center;
+    background-image: url("../images/bannerbackground.png");
+    background-repeat: repeat-x;
+    height: 50px;
+}
+h1{
+    text-align: center;
+    font-size: 24pt;
+    font-weight: bold;
+    font-family: Tahoma, Verdana, sans-serif;
+}
+/*此为主题内容整体内容区域的id*/
+#outest{
+    width: 800px;
+    margin: auto;
+    border: 4px gray solid;
+    overflow: hidden;
+}
+/*主体左顶端部分*/
+#left_top{
+    background-image: url("../images/rottenbackground.png");
+    background-repeat: repeat-x;
+    height: 83px;
+}
+#left_top img{
+    vertical-align: bottom;
+}
+#n32{
+    font-size: 48pt;
+    font-weight: bold;
+    color: red;
+}
+#n8{
+    font-size: 8pt;
+    color: white;
+}
+/*左中心部分*/
+#left_center{
+    width: 550px;
+    float: left;
+}
+/*左侧*/
+#coloumn1{
+    float: left;
+    width: 47%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+/*右侧*/
+#coloumn2{
+    float: right;
+    width: 47%;
+    margin-right: 2%;
+}
+#right_summary{
+    float: right;
+    width: 250px;
+    background-color: #A2B964;
+}
+#right_summary dl{
+    font-family: Arial,sans-serif;
+    font-size: 8pt;
+    margin: 10px 10px;
+}
+#right_summary dt{
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+/*下方页面*/
+#below_center{
+    background-color: #A2B964;
+    text-align: center;
+    width: 800px;
+    float: left;
+    margin: 0;
+    padding: 5px;
+}
+/*评论的字体*/
+.quote{
+    font-weight: bold;
+    font-size: 8pt;
+    background-color: #E1D697;
+    border: 2px solid gray;
+    padding: 8px 8px;
+    overflow: hidden;
+}
+/*评论的喜欢与否图片*/
+.imgreviewer{
+    margin-bottom: 3em;
+}
+.quote img, .imgreviewer img{
+    float: left;
+    margin-right: 5px;
+}
+.publication{
+    font-style: italic;
+}
+
+/*W3C标志*/
+#label{
+    border: 0;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}

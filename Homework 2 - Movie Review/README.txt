@@ -1,0 +1,19 @@
+此包包含：
+images文件夹:
+		background.png
+		banner.png
+		bannerbackground.png
+		critic.gif
+		fresh.gif
+		generaloverview.png
+		rotten.gif
+		rottenbackground.png
+		rottenbig.png
+		valid-xhtml11.png
+		vcss.gif
+html文件:
+		tmnt.html
+css文件:
+		movie.css
+以及:
+		README.txt
