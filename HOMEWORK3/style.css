@@ -1,0 +1,237 @@
+/*17343115 温卓沛 ring menu css文件*/
+
+/*下方存在几个辅助线以及div框的颜色辅助语句，皆用注释符号注释起来，
+    若想分割检查，可相对去掉相应分割注释符*/
+
+/* #at-plus-container, #at-plus-container div{
+    border: 1px solid blue;
+} */
+
+/* #button,#button div{
+    border: 1px solid blue;
+} */
+
+ /* #info-bar{
+    border: 1px solid blue;
+}  */
+
+/* #control-ring-container,#control-ring-container div{
+    border: 1px solid blue;
+} */
+/* li{
+    border: 1px solid blue;
+} */
+/*正文*/
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    overflow: hidden;
+    padding: 0px;
+}
+
+/* 将ul的样式改变为没有什么特别的格式 */
+ul {
+    list-style-type: none;
+}
+
+/* 以此容器作为整个菜单的界面 */
+#at-plus-container {
+    position: relative;
+    width: 180px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: red; *//*检测使用*/
+}
+
+/* 以此div框为基准下限来进行布局 */
+#bottom-positioner {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* 信息栏的正方块(div框)的位置 */
+#info-bar {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    bottom: 0px;
+    left: 77px;
+    border-radius: 50%;
+    background-color: #7E7E7E;
+    transition: all 0.8s;/*状态转移时间*/
+    opacity: 0;/*不显像*/
+}
+
+/*信息栏的正方块(div框)变换的位置 */
+#button:hover #info-bar {
+    width: 130px;
+    height: 130px;
+    bottom: 150px;
+    left: 25px;
+    border-radius: 50%;
+    background-color: #7E7E7E;
+    opacity: 1;/*显像*/
+}
+
+#info-bar ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#info-bar li {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 0;
+    color: white;
+}
+
+#info-bar li img {
+    vertical-align: middle;
+}
+
+/* 通过margin-left属性调整字体与图片的间距 */
+#info-bar li span {
+    margin-left: 8px;
+}
+
+#info-bar li.user {
+    padding-bottom: 3px;
+}
+
+#info-bar li.mine {
+    width: 50%;
+    color: #26E79E;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+#info-bar li.posted {
+    padding-left: 15px;
+}
+
+#info-bar li.like {
+    padding-right: 15px;
+}
+
+#info-bar li.page {
+    margin-bottom: 3px;
+}
+
+#info-bar li.comment {
+    font-size: 30px;
+}
+
+
+/* 控制按钮的正方块(div框)的位置 */
+#control-ring-container {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    bottom: 98px;
+    left: 77px;
+    border-radius: 50%;
+}
+
+/*control-ring-container下的li*/
+#control-ring-container li {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #686868 no-repeat center;
+    background-size: 17px 17px;
+    display: block;/*点到块就发生动作*/
+    position: absolute;/*设置为absolute以便于后面各个标志的精准定位*/
+    margin-top: -20px;
+    margin-left: -42px;
+    transition: all 0.8s;/*状态转移时间*/
+    opacity: 0;/*不显像*/
+}
+#button:hover #control-ring li.mask {
+    margin-top: -60px;
+    margin-left: -104px;
+    background-image: url("assets/images/nomask.png");
+    opacity: 1;/*显像*/
+}
+
+#button:hover #control-ring li.history {
+    margin-top: -20px;
+    margin-left: -114px;
+    background-image: url("assets/images/history.png");
+    opacity: 1;/*显像*/
+}
+
+
+#button:hover #control-ring li.message {
+    margin-top: 15px;
+    margin-left: -101px;
+    background-image: url("assets/images/message.png");
+    opacity: 1;/*显像*/
+}
+
+#button:hover #control-ring li.setting {
+    margin-top: 41px;
+    margin-left: -72px;
+    background-image: url("assets/images/setting.png");
+    opacity: 1;/*显像*/
+}
+
+#button:hover #control-ring li.sign {
+    margin-top: 38px;
+    margin-left: -24px;
+    background-image: url("assets/images/signout.png");
+    opacity: 1;/*显像*/
+}
+
+
+/*message标签上的2*/
+#control-ring li span.unread {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    color: #E0D6DC;
+    display: block;
+    padding-top: 0px;
+    padding-left: 5px;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+/* button正方块(包含apb图标)的位置 */
+#button {
+    width: 25px;
+    height: 25px;
+    margin: 97px 77px;
+}
+
+/* apb的位置及其背景图初始相关属性 */
+#button .apb {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    bottom: 97px;
+    left: 77px;
+    border-radius: 50%;
+    background: url("assets/images/atplus_white.png") no-repeat center;
+    background-size: 20px 15px;
+    background-color: #989FCF;
+    transition: all 0.5s;
+}
+
+/* apb的位置及其背景图转换相关属性 */
+#button:hover .apb {
+    width: 50px;
+    height: 50px;
+    bottom: 85px;
+    left: 65px;
+    background: url("assets/images/atplus_green.png") no-repeat center;
+    background-size: 40px 30px;
+    background-color: #303F9F;
+}
